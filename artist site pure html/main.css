@@ -1,14 +1,19 @@
 body{
-    margin:20px 20px 20px 600px;
+    margin:10vh 10vw 10vh 10vw;
 }
 
 #eleven{
-    padding-left:40px;
+    padding-left:20vw;
     
 }
 
 #twelve{
-    padding-left:80px;
-    padding-bottom:40px;
+    padding-left:30vw;
+    padding-bottom:20vh;
     
+}
+
+#fourteen{
+    padding-top:30vh;
+    padding-left:50vw;
 }
