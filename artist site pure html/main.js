@@ -5,20 +5,20 @@ function getCurrentPageNumber() {
     return match ? parseInt(match[1]) : null;
 }
 
-function checkIndex(){
-    const match = window.location.pathname.match(/index.html/);
+function checkFirst(){
+    const match = window.location.pathname.match(/first.html/);
     return match ? true : false;
 }
 
 // Navigate to the next page
 function goToNextPage() {
     const currentPage = getCurrentPageNumber();
-    const isIndex = checkIndex();
-    if (currentPage == null && isIndex == true) {
+    const isFirst = checkFirst();
+    if (currentPage == null && isFirst == true) {
         window.location.href = `page2.html`;
     }
 
-    else if (currentPage !== null && currentPage < 51) {
+    else if (currentPage !== null && currentPage < 55) {
         const nextPage = currentPage + 1;
         window.location.href = `page${nextPage}.html`;
     }
@@ -32,3 +32,10 @@ window.addEventListener('click', function() {
 document.querySelectorAll('a').forEach(link => {
     link.hidden = true;
 });
+
+// Automatically go to the next page after 0.3ish second delay (comment out for click mode)
+function setInterval() {setTimeout(function() {
+    goToNextPage();
+}, 300);}
+
+window.addEventListener('load', setInterval);

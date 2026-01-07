@@ -2,8 +2,24 @@ body{
     margin:10vh 10vw 10vh 10vw;
 }
 
+div{
+    padding-left: 30vw;
+}
+
+.computer{
+    margin-left:-2.5vw;
+    padding-left: 0vw;
+    display: flex;
+    justify-content: center;
+    padding-top:15vh;
+}
+
+.computer a{
+    text-decoration: none;
+}
+
 #eleven{
-    padding-left:20vw;
+    padding-left:30vw;
     
 }
 
@@ -15,5 +31,25 @@ body{
 
 #fourteen{
     padding-top:30vh;
-    padding-left:50vw;
+    padding-left:40vw;
+}
+
+#fifteen{
+    padding-top:18vh;
+    padding-left:45vw;
+}
+
+#sixteen{
+    padding-top:10vh;
+    padding-left:53vw;
+}
+
+#seventeen{
+    padding-top:9vh;
+    padding-left:47vw;
+}
+
+#eighteen{
+    padding-top:7vh;
+    padding-left:40vw;
 }
