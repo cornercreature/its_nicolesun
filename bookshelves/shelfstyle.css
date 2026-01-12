@@ -1,0 +1,61 @@
+body{
+    margin:0px;
+    padding:0px;
+    display: flex;
+    height:100vh;
+    flex-direction: column;
+}
+
+.up{
+    top:0;
+    width:100%;
+    height:60%;
+    border:0.5px solid black;
+    display:flex;
+    flex-direction: row;
+    resize: vertical;
+    overflow: auto;
+}
+
+.l_up{
+    width:70%;
+    height: 100%;
+    border:0.5px solid black;
+    resize: horizontal;
+    overflow: auto;
+}
+
+.r_up{
+    width:30%;
+    height: 100%;
+    border:0.5px solid black;
+    resize: horizontal;
+    overflow: auto;
+}
+
+.down{
+    bottom:0;
+    width:100%;
+    height: 40%;
+    border:0.5px solid black;
+    display:flex;
+    flex-direction: row;
+    resize: vertical;
+    overflow: auto;
+}
+
+.l_down{
+    width:30%;
+    height: 100%;
+    border:0.5px solid black;
+    resize: horizontal;
+    overflow: auto;
+}
+
+.r_down{
+    width:70%;
+    height: 100%;
+    border:0.5px solid black;
+    resize: horizontal;
+    overflow: auto;
+}
