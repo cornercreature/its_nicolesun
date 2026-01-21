@@ -104,9 +104,9 @@ function toggleLines(){
     if(showSprings){
         for (let spring of springs){
             //switch back to blend so that there is no flashing error
-        blendMode(DIFFERENCE);
+        // blendMode(DIFFERENCE);
         spring.show();
-        blendMode(BLEND);
+        // blendMode(BLEND);
         }
     }
 }
@@ -116,7 +116,7 @@ function toggleSpringVisibility(){
 }
 
 function draw() {
-  background("f0f0f0");
+  background("#006affff");
   
   //physics world does not cycle through time of function draw UNLESS physics update is explicitly called.
   //add some delay so movement looks more natural
