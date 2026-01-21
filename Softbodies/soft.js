@@ -32,7 +32,7 @@ function setup() {
   //vertical vector made
   //strength of gravity is also determined by length of vector
 
-  let v = new Vec2D(0,0.06);
+  let v = new Vec2D(0.06,0.06);
   //vector called into gravity behavior to determine direction
   let gravity = new GravityBehavior(v);
   // //note variables are not necessary you can just put Vec2d into gravity behavior if you like
