@@ -11,14 +11,53 @@ body{
     border:1px solid black;
     display: flex;
     justify-content: start;
-    padding-left: 30px;
-    padding-top:20px;
+    /* padding-left: 30px;
+    padding-top:20px; */
 }
 
 #softCanvas{
     border: 1px solid black;
     padding:0;
     overflow: hidden;
-    height: 600px;
-    width: 480px;
+    height: 900px;
+    width: 600px;
+}
+
+.control{
+    position:absolute;
+    top:10px;
+    left:20px;
+    border:2px solid black;
+    width:18vw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding:10px 10px 10px 15px;
+}
+.intro{
+    padding: 20px 8px 40px 8px;
+    width:90%;
+    border: 1px solid black;
+}
+
+h2{
+    text-align: center;
+}
+p{
+    margin-left: 20px;
+    width: 80%;
+    line-height: 1.5;
+}
+hr{
+    width: 90%
+}
+
+button{
+    margin-top: 10px;
+    border:black 1px solid;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: white;
+    font-size:16px;
 }

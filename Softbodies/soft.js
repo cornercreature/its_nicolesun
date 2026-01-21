@@ -5,6 +5,8 @@ const {GravityBehavior} = toxi.physics2d.behaviors;
 //importing vector classes
 const {Vec2D, Rect} = toxi.geom;
 
+let showSprings = true;
+
 let physics;
 
 let particles = [];
@@ -15,26 +17,28 @@ let rootParticles=[];//root particles are first letters of each word
 
 let rX;
 let rY;
-let bounce=0.4;
-let length=70;
+let bounce=0.9;
+let length=200;
 
 function setup() {
-  var softCanvas = createCanvas(480, 600);
+  var softCanvas = createCanvas(600, 900);
     softCanvas.parent("softCanvas");
   
   //calling in physics
   physics = new VerletPhysics2D();
   //add some drag so particles dont move too suddenly
-  physics.setDrag(0.04); 
+  physics.setDrag(0.02); 
   //must determine direction of gravity with vector!
   //vertical vector made
   //strength of gravity is also determined by length of vector
-  let v = new Vec2D(0,0.1);
+
+  let v = new Vec2D(0,0.06);
   //vector called into gravity behavior to determine direction
   let gravity = new GravityBehavior(v);
   // //note variables are not necessary you can just put Vec2d into gravity behavior if you like
   // //you must explicity add gravity into world for gravity to exist!
   physics.addBehavior(gravity);
+  
   
   
   let bounds = new Rect(0,0, width, height);
@@ -96,16 +100,31 @@ function keyPressed(){
   }
 }
 
+function toggleLines(){
+    if(showSprings){
+        for (let spring of springs){
+            //switch back to blend so that there is no flashing error
+        blendMode(DIFFERENCE);
+        spring.show();
+        blendMode(BLEND);
+        }
+    }
+}
+
+function toggleSpringVisibility(){
+    showSprings = !showSprings;
+}
+
 function draw() {
-  background(220);
+  background("f0f0f0");
   
   //physics world does not cycle through time of function draw UNLESS physics update is explicitly called.
   //add some delay so movement looks more natural
-  physics.update(0.4);
+  physics.update(0.9);
   
   if (mouseIsPressed){
     let closestRoot = null;
-    let closestDist = 20; //only drag if mouse is within 40px of root
+    let closestDist = 80; //only drag if mouse is within 40px of root
 
     // Find the closest root particle
     for (let root of rootParticles){
@@ -127,9 +146,14 @@ function draw() {
     }
   }
   
-  //for of loops let you cycle through an array's elements when you don't need the index value
-  for (let particle of particles){
+    //for of loops let you cycle through an array's elements when you don't need the index value
+    for (let particle of particles){
+
+    blendMode(DIFFERENCE);
     particle.show();
+    blendMode(BLEND);
     }
+
+    toggleLines();
 }
 
