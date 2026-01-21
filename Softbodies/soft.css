@@ -1,0 +1,24 @@
+body{
+    margin:10px auto 0px auto;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.poster{
+    height:900px;
+    width:600px;
+    border:1px solid black;
+    display: flex;
+    justify-content: start;
+    padding-left: 30px;
+    padding-top:20px;
+}
+
+#softCanvas{
+    border: 1px solid black;
+    padding:0;
+    overflow: hidden;
+    height: 600px;
+    width: 480px;
+}

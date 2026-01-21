@@ -57,13 +57,13 @@ function keyTyped(){
 
   // Determine if this particle should be a root (first letter of a word)
   if (particles.length === 1) {
-    // Very first particle
+    // .push is how to add to an array
     rootParticles.push(newParticle);
   } else if (key === ' ') {
-    // Space character - don't add to roots, don't create spring
-    // Spaces are just visual separators
+    // if there is a space then don't create spring
+    //minus 2 because array begins from 0 
   } else if (displayText[displayText.length - 2] === ' ') {
-    // First letter after a space - this is a new root
+    // First letter after a space will be pushed into root array
     rootParticles.push(newParticle);
   } else {
     // Regular letter in the middle of a word - create spring
@@ -105,7 +105,7 @@ function draw() {
   
   if (mouseIsPressed){
     let closestRoot = null;
-    let closestDist = 40; //only drag if mouse is within 40px of root
+    let closestDist = 20; //only drag if mouse is within 40px of root
 
     // Find the closest root particle
     for (let root of rootParticles){
