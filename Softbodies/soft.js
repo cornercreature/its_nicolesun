@@ -20,6 +20,9 @@ let rY;
 let bounce=0.9;
 let length=200;
 
+//cjkMode set to false by default (english mode)
+let cjkMode = false;
+
 function setup() {
   var softCanvas = createCanvas(600, 900);
     softCanvas.parent("softCanvas");
@@ -46,6 +49,21 @@ function setup() {
   physics.setWorldBounds(bounds);
 
   // No initial particles - they'll be created when user starts typing
+
+  //setting up IME detection for CJK input
+
+
+//   else if(!cjkMode){
+//     //add typed character into displayText array
+//     displayText.push(key);
+//   let newParticle = new CParticle(mouseX, mouseY, key);
+//   particles.push(newParticle);
+//   }
+}
+
+//listen for CJK toggle
+function toggleCJK(){
+    cjkMode = !cjkMode;
 }
 
 function keyTyped(){
@@ -54,10 +72,12 @@ function keyTyped(){
     return false;
   }
 
+  if(cjkMode){
   //add typed letter into displayText array
   displayText.push(key);
   let newParticle = new Particle(mouseX, mouseY, key);
   particles.push(newParticle);
+  }
 
   // Determine if this particle should be a root (first letter of a word)
   if (particles.length === 1) {
@@ -81,24 +101,27 @@ function keyTyped(){
 //listen for backspace so delete can be implemented
 function keyPressed(){
   //=== listens for strict equality- if values are equal and of the same type
-  if (keyCode === BACKSPACE){
-    displayText.pop();
-    
-    let lastParticle = particles.pop();
-    if (lastParticle) {
-      physics.removeParticle(lastParticle);
-      let rootIndex = rootParticles.indexOf(lastParticle);
-      if (rootIndex > -1){
-        rootParticles.splice(rootIndex, 1);
-      }
+    if (keyCode === BACKSPACE){
+        displayText.pop();
+        
+        let lastParticle = particles.pop();
+        if (lastParticle) {
+        physics.removeParticle(lastParticle);
+        let rootIndex = rootParticles.indexOf(lastParticle);
+        if (rootIndex > -1){
+            rootParticles.splice(rootIndex, 1);
+        }
+        }
+        
+        let lastSpring = springs.pop();
+        
+        if (lastSpring) {
+        physics.removeSpring(lastSpring);
+        }
     }
-    
-    let lastSpring = springs.pop();
-    if (lastSpring) {
-      physics.removeSpring(lastSpring);
+
   }
-  }
-}
+  
 
 function toggleLines(){
     if(showSprings){
@@ -113,6 +136,18 @@ function toggleLines(){
 
 function toggleSpringVisibility(){
     showSprings = !showSprings;
+    if(showSprings){
+        document.getElementById("springbutton");
+        springbutton.style.backgroundColor = "#006affff";
+        springbutton.style.color = "#fff";
+        springbutton.textContent = "hide connections";
+    }
+    else{
+        document.getElementById("springbutton");
+        springbutton.textContent = "see connections";
+        springbutton.style.color = "#000";
+        springbutton.style.backgroundColor = "#7bff00ff";
+    }
 }
 
 function draw() {

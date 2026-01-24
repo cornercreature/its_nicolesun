@@ -8,7 +8,7 @@ class spring extends VerletSpring2D{
   }
   show(){
     stroke("#7bff00ff");
-    strokeWeight(3);
+    strokeWeight(2);
     line(this.a.x,this.a.y,this.b.x,this.b.y);
     }
 }

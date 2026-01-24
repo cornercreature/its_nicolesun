@@ -53,11 +53,9 @@ hr{
     width: 90%
 }
 
-button{
-    margin-top: 10px;
-    border:black 1px solid;
-    border-radius: 0;
-    box-shadow: none;
-    background-color: white;
-    font-size:16px;
+button {
+    margin-top:10px;
+    border-radius: none;
+    color: "#000";
+    background-color: "#7bff00ff";
 }
