@@ -8,6 +8,8 @@ const {Vec2D, Rect} = toxi.geom;
 let showSprings = true;
 
 let physics;
+let gVectorX=0.05;
+let gVectorY=0.05;
 
 let particles = [];
 let springs = [];
@@ -72,7 +74,7 @@ inputElement.addEventListener('compositionend', function(e) {
         //this creates particle for each character
         displayText.push(char);
         //redefine particle here so that a character exists.
-        let newParticle = new CParticle(mouseX,mouseY, char);
+        let newParticle = new CParticle(mouseX,mouseY, char, fontSize);
         particles.push(newParticle);
 
         //determining if particle is root
@@ -125,7 +127,7 @@ function keyTyped(){
   if(!cjkMode){
     //add typed letter into displayText array
     displayText.push(key);
-    let newParticle = new Particle(mouseX, mouseY, key);
+    let newParticle = new Particle(mouseX, mouseY, key, fontSize);
     particles.push(newParticle);
     // Determine if this particle should be a root (first letter of a word)
     if (particles.length === 1) {
