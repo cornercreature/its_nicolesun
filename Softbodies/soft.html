@@ -45,6 +45,11 @@
         </div>
         <button id = "springbutton" onclick="toggleSpringVisibility();">see connections</button>
         <button id = "cjkbutton" onclick="toggleCJK();">Hanzi Mode</button>
+        <div class="slider-container">
+            <!-- you can put the label before the id'd class and call it and itll work! -->
+            <label for = "fontSlider">Font Size: <span id="fontValue"> 280</span></label>
+            <input type="range" id="fontSlider" min="1" max="560" value="280" oninput="updateFontSize()">
+        </div>
     </div>
 </body>
 </html>

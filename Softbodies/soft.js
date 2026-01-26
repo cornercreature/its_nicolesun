@@ -19,6 +19,7 @@ let rX;
 let rY;
 let bounce=0.9;
 let length=200;
+let fontSize=280; 
 
 //cjkMode set to false by default (english mode)
 let cjkMode = false;
@@ -102,6 +103,12 @@ function toggleCJK(){
       inputElement.blur();
       document.getElementById("cjkbutton").textContent = "CJK Mode";
     }
+}
+
+function updateFontSize(){
+  //plus converts string to number, is the shorthand for Number()
+  fontSize = +document.getElementById('fontSlider').value;
+  document.getElementById('fontValue').textContent = fontSize;
 }
 
 function keyTyped(){
