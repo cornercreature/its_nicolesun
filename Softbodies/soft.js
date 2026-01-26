@@ -22,6 +22,7 @@ let length=200;
 
 //cjkMode set to false by default (english mode)
 let cjkMode = false;
+let inputElement;
 
 function setup() {
   var softCanvas = createCanvas(600, 900);
@@ -51,19 +52,56 @@ function setup() {
   // No initial particles - they'll be created when user starts typing
 
   //setting up IME detection for CJK input
-
-
-//   else if(!cjkMode){
-//     //add typed character into displayText array
-//     displayText.push(key);
-//   let newParticle = new CParticle(mouseX, mouseY, key);
-//   particles.push(newParticle);
-//   }
-}
+  //ime is input method editor. since cjk works on characters, you need this editor in order to display them.
+//to create a space for ime to run, we'll use an invisible input field
+  inputElement = document.createElement('input');
+  inputElement.style.position = 'absolute';
+  inputElement.style.left = '-9999px'; //this crazy number hides the field offscreen!
+  inputElement.style.pointerEvents = 'none';
+  document.body.appendChild(inputElement);
 
 //listen for CJK toggle
+//event listener for CJK character to be finalized
+//function(e) is just a short version of function(event), there's no actual difference in functionality
+//compositionend is the browser event that already exists. also with e.data, e.target, e.type
+inputElement.addEventListener('compositionend', function(e) {
+    if(cjkMode && e.data){
+      //e.data is final composed characters
+      for (let char of e.data){
+        //this creates particle for each character
+        displayText.push(char);
+        //redefine particle here so that a character exists.
+        let newParticle = new CParticle(mouseX,mouseY, char);
+        particles.push(newParticle);
+
+        //determining if particle is root
+        if (particles.length === 1) {
+          rootParticles.push(newParticle);
+        } else if (displayText[displayText.length - 2] === ' ') {
+          rootParticles.push(newParticle);
+        } else {
+          //spring creation here
+          let prevParticle = particles[particles.length - 2];
+          springs.push(new spring(prevParticle, newParticle, length, bounce));
+        }
+      }
+      inputElement.value = ''; // Clear input field after processing
+      inputElement.focus(); // Keep focus on the input field
+    }
+});
+}
+
 function toggleCJK(){
+  //focus and blur are builtin browser methods. focus places focus on an element and blure removes focus from an element.
+  //the element without focus will not recieve the input, ensuring the correct language is processed.
     cjkMode = !cjkMode;
+    if(cjkMode){
+      inputElement.focus();
+      document.getElementById("cjkbutton").textContent = "English Mode";
+    } else {
+      inputElement.blur();
+      document.getElementById("cjkbutton").textContent = "CJK Mode";
+    }
 }
 
 function keyTyped(){
@@ -72,27 +110,31 @@ function keyTyped(){
     return false;
   }
 
-  if(cjkMode){
-  //add typed letter into displayText array
-  displayText.push(key);
-  let newParticle = new Particle(mouseX, mouseY, key);
-  particles.push(newParticle);
+  if (key === ' '){
+    displayText.push(' ');
+    return false;
   }
 
-  // Determine if this particle should be a root (first letter of a word)
-  if (particles.length === 1) {
-    // .push is how to add to an array
-    rootParticles.push(newParticle);
-  } else if (key === ' ') {
-    // if there is a space then don't create spring
-    //minus 2 because array begins from 0 
-  } else if (displayText[displayText.length - 2] === ' ') {
-    // First letter after a space will be pushed into root array
-    rootParticles.push(newParticle);
-  } else {
-    // Regular letter in the middle of a word - create spring
-    let prevParticle = particles[particles.length - 2];
-    springs.push(new spring(prevParticle, newParticle, length, bounce));
+  if(!cjkMode){
+    //add typed letter into displayText array
+    displayText.push(key);
+    let newParticle = new Particle(mouseX, mouseY, key);
+    particles.push(newParticle);
+    // Determine if this particle should be a root (first letter of a word)
+    if (particles.length === 1) {
+      // .push is how to add to an array
+      rootParticles.push(newParticle);
+    } else if (key === ' ') {
+      // if there is a space then don't create spring
+      //minus 2 because array begins from 0 
+    } else if (displayText[displayText.length - 2] === ' ') {
+      // First letter after a space will be pushed into root array
+      rootParticles.push(newParticle);
+    } else {
+      // Regular letter in the middle of a word - create spring
+      let prevParticle = particles[particles.length - 2];
+      springs.push(new spring(prevParticle, newParticle, length, bounce));
+    }
   }
     
   return(false);
@@ -118,6 +160,10 @@ function keyPressed(){
         if (lastSpring) {
         physics.removeSpring(lastSpring);
         }
+    }
+    
+    if (cjkMode && inputElement) {
+      inputElement.focus();
     }
 
   }
