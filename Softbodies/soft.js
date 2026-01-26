@@ -64,6 +64,8 @@ function setup() {
   inputElement.style.pointerEvents = 'none';
   document.body.appendChild(inputElement);
 
+  document.getElementById('springbutton').addEventListener('click', toggleSpringVisibility);
+  document.getElementById('cjkbutton').addEventListener('click', toggleCJK);
 //listen for CJK toggle
 //event listener for CJK character to be finalized
 //function(e) is just a short version of function(event), there's no actual difference in functionality
