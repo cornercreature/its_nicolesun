@@ -8,6 +8,7 @@ const {Vec2D, Rect} = toxi.geom;
 let showSprings = true;
 
 let physics;
+let gravity; //edited to make gravity global so that sliders can work (html can only access global functions and variables)
 let gVectorX=0.05;
 let gVectorY=0.05;
 
@@ -39,9 +40,9 @@ function setup() {
   //vertical vector made
   //strength of gravity is also determined by length of vector
 
-  let v = new Vec2D(0.06,0.06);
+  let v = new Vec2D(gVectorX,gVectorY);
   //vector called into gravity behavior to determine direction
-  let gravity = new GravityBehavior(v);
+  gravity = new GravityBehavior(v);
   // //note variables are not necessary you can just put Vec2d into gravity behavior if you like
   // //you must explicity add gravity into world for gravity to exist!
   physics.addBehavior(gravity);
@@ -112,6 +113,17 @@ function updateFontSize(){
   fontSize = +document.getElementById('fontSlider').value;
   document.getElementById('fontValue').textContent = fontSize;
 }
+
+  function updateGVectorX(){
+    gVectorX = +document.getElementById('gVectorXSlider').value;
+    document.getElementById('gVectorXValue').textContent = gVectorX;
+    gravity.setForce(new Vec2D(gVectorX, gVectorY));
+  }
+  function updateGVectorY(){
+    gVectorY = +document.getElementById('gVectorYSlider').value;
+    document.getElementById('gVectorYValue').textContent = gVectorY;
+    gravity.setForce(new Vec2D(gVectorX, gVectorY));
+  }
 
 function keyTyped(){
   //ensuring backspace is not picked up by keyTyped because we need it for keyPressed
