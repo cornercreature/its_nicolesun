@@ -38,7 +38,11 @@ function setup() {
 
   //colorpicker
   var colorPicker = new iro.ColorPicker('#picker',{
+    //this is written in object literal notation
+    borderWidth: 1,
+    borderColor: "#000000",
     color: bgColor,
+    width: 220,
   });
   colorPicker.on('color:change', function(color) {
   // log the current color as a HEX string
