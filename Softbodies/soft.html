@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>softbody</title>
+    <title>Gravitype</title>
     <!-- css connection -->
     <link rel="stylesheet" href="soft.css">
 
@@ -30,12 +30,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap" rel="stylesheet">
+
+    <!-- iro color picker -->
+     <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
 </head>
 <body>
-    <div class="control">
+    <div class="controlR">
         <div class="intro">
             <h2>GRAVITY<br>TYPE<br>MAKER</h2>
         </div>
@@ -44,17 +47,10 @@
         </div>
         
         <div class="buttons">
-            <h3>CONTROLS</h3>
-            <button id = "springbutton">Hide Connections</button>
             <button id = "cjkbutton">Hanzi Mode</button>
         </div>
         <div class="sliders">
-            <p>✰ Adjust BEFORE typing text.</p>
-            <div class="font-slider-container">
-                <!-- you can put the label before the id'd class and call it and itll work! -->
-                <label for = "fontSlider">Font Size: <span id="fontValue"> 280</span></label>
-                <input type="range" id="fontSlider" min="1" max="560" value="280" oninput="updateFontSize()">
-            </div>
+            <h3>GRAVITY</h3>
             <p>✰ Slide to customize gravitational force and direction.</p>
             <div class="gVectorX-slider-container">
                 <label for = "gVectorXSlider">Gravity X: <span id="gVectorXValue"> 0.05</span></label>
@@ -66,11 +62,34 @@
             </div>
         </div>
         <div class="gravitygif">
-<a title="Rachelz9999, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:GravPoss.gif"><img width="256" alt="GravPoss" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/GravPoss.gif?20170101094953"></a>        </div>
-    </div>
+            <a title="Rachelz9999, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:GravPoss.gif"><img width="156" alt="GravPoss" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/GravPoss.gif?20170101094953"></a>        
+        </div>
+        </div>
     <div class="poster">
         <div id="softCanvas"></div>
     </div>
+    <div class="controlL">
+        <div class="appearancecontainer">
+            <h3>Text Appearance</h3>
+        <div class="buttons">
+            <button id = "springbutton">Hide Connections</button>
+        </div>
+        <div class="sliders">
+            <p>✰ Adjust BEFORE typing text.</p>
+            <div class="font-slider-container">
+                <!-- you can put the label before the id'd class and call it and itll work! -->
+                <label for = "fontSlider">Font Size: <span id="fontValue"> 280</span></label>
+                <input type="range" id="fontSlider" min="1" max="560" value="280" oninput="updateFontSize()">
+            </div>
+            <div class="font-stroke-container">
+                <label for = "fontStrokeW">Outline Weight: <span id="strokeValue"> 5</span></label>
+                <input type="range" id="fontStrokeW" min="0" max="20" value="5" oninput="updateStrokeW()">
+            </div>
+        </div>
+        <h3>BACKGROUND COLOR</h3>
+        <p>✰ Letters are .</p>
+        <div id="picker"></div>
+
+    </div>
 </body>
 </html>
-

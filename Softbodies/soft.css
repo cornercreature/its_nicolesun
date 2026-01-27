@@ -1,15 +1,14 @@
 body{
-    margin:10px auto 0px auto;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     background-color: rgb(234, 234, 234);
+    width: 100vw;
 }
 
 .poster{
     height:900px;
     width:600px;
     border:0.4px solid black;
-    margin-right: 16rem;
     margin-top: 1rem;
     display: flex;
     justify-content: center;
@@ -24,11 +23,18 @@ body{
     width: 600px;
 }
 
-.control{
-    position:absolute;
-    top:0px;
-    left:0px;
-    height:100%;
+.controlR{
+    height:100vh;
+    border:1px solid black;
+    width:22rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: top;
+    background-color: rgb(255, 255, 255);
+}
+.controlL{
+    height:100vh;
     border:1px solid black;
     width:22rem;
     display: flex;

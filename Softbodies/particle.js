@@ -15,7 +15,7 @@ class Particle extends VerletParticle2D{
   show(){
   // //the particle is not a shape. you assign whatever visual element you want to a particle.
     fill("#01fd0eff");
-    strokeWeight(5);
+    strokeWeight(strokeW);
     stroke("#fc5fffff");
     textSize(this.fontSize);
     textFont('Young Serif');
@@ -36,7 +36,7 @@ class CParticle extends VerletParticle2D{
   
   show(){
     fill("#dba9dcff");
-    strokeWeight(5);
+    strokeWeight(strokeW);
     stroke("#01fd0eff");
     textSize(this.fontSize);
     textFont('Cactus Classical Serif');

@@ -23,12 +23,27 @@ let rY;
 let bounce=0.9;
 let length=200;
 let fontSize=280; 
+let strokeW=5;
 
 //cjkMode set to false by default (english mode)
 let cjkMode = false;
 let inputElement;
 
+//color variables
+let colorPicker;
+let bgColor = "#141d29ff";
+
 function setup() {
+  //initialize everything that needs to be seen on screen IN setup
+
+  //colorpicker
+  var colorPicker = new iro.ColorPicker('#picker',{
+    color: bgColor,
+  });
+  colorPicker.on('color:change', function(color) {
+  // log the current color as a HEX string
+  bgColor = color.hexString;
+});
   var softCanvas = createCanvas(600, 900);
     softCanvas.parent("softCanvas");
   
@@ -144,16 +159,22 @@ function updateFontSize(){
   document.getElementById('fontValue').textContent = fontSize;
 }
 
-  function updateGVectorX(){
+function updateGVectorX(){
     gVectorX = +document.getElementById('gVectorXSlider').value;
     document.getElementById('gVectorXValue').textContent = gVectorX;
     gravity.setForce(new Vec2D(gVectorX, gVectorY));
-  }
-  function updateGVectorY(){
+}
+
+function updateGVectorY(){
     gVectorY = +document.getElementById('gVectorYSlider').value;
     document.getElementById('gVectorYValue').textContent = gVectorY;
     gravity.setForce(new Vec2D(gVectorX, gVectorY));
-  }
+}
+
+function updateStrokeW(){
+  strokeW = +document.getElementById('fontStrokeW').value;
+  document.getElementById('strokeValue').textContent = strokeW;
+}
 
 function keyTyped(){
   //ensuring backspace is not picked up by keyTyped because we need it for keyPressed
@@ -248,7 +269,7 @@ function toggleSpringVisibility(){
 }
 
 function draw() {
-  background("#141d29ff");
+  background(bgColor);
   
   //physics world does not cycle through time of function draw UNLESS physics update is explicitly called.
   //add some delay so movement looks more natural
