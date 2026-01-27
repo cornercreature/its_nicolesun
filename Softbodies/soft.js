@@ -248,7 +248,7 @@ function toggleSpringVisibility(){
 }
 
 function draw() {
-  background("#006affff");
+  background("#141d29ff");
   
   //physics world does not cycle through time of function draw UNLESS physics update is explicitly called.
   //add some delay so movement looks more natural

@@ -7,7 +7,7 @@ class spring extends VerletSpring2D{
     physics.addSpring(this);
   }
   show(){
-    stroke("#7bff00ff");
+    stroke("#d3d3d3ff");
     strokeWeight(2);
     line(this.a.x,this.a.y,this.b.x,this.b.y);
     }
