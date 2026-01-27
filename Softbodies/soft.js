@@ -65,7 +65,35 @@ function setup() {
   document.body.appendChild(inputElement);
 
   document.getElementById('springbutton').addEventListener('click', toggleSpringVisibility);
+   //styling buttons in js because appearance changes on toggle so its easier to just keep everything in the JS file
+  let springBtn = document.getElementById('springbutton');
+  let cjkBtn = document.getElementById('cjkbutton');
+
+  springBtn.style.backgroundColor = '#006affff';
+  springBtn.style.color = '#fff';
+  springBtn.style.border = 'none';
+  springBtn.style.width = '140px';
+  springBtn.style.height = '30px';
+  springBtn.style.fontSize = '16px';
+  springBtn.style.cursor = 'pointer';
+  springBtn.style.borderRadius = '0px';
+  springBtn.style.fontFamily = 'Times New Roman, Times, serif';
+  springBtn.style.textDecorationLine = 'underline';
+  springBtn.style.border = '1px solid #000';
+
   document.getElementById('cjkbutton').addEventListener('click', toggleCJK);
+  cjkBtn.style.backgroundColor = '#7bff00ff';
+  cjkBtn.style.color = '#000';
+  cjkBtn.style.border = 'none';
+  cjkBtn.style.width = '140px';
+  cjkBtn.style.height = '30px';
+  cjkBtn.style.fontSize = '16px';
+  cjkBtn.style.cursor = 'pointer';
+  cjkBtn.style.borderRadius = '0px';
+  cjkBtn.style.fontFamily = 'Times New Roman, Times, serif';
+  cjkBtn.style.textDecorationLine = 'underline';
+  cjkBtn.style.border = '1px solid #000';
+
 //listen for CJK toggle
 //event listener for CJK character to be finalized
 //function(e) is just a short version of function(event), there's no actual difference in functionality
@@ -106,7 +134,7 @@ function toggleCJK(){
       document.getElementById("cjkbutton").textContent = "English Mode";
     } else {
       inputElement.blur();
-      document.getElementById("cjkbutton").textContent = "CJK Mode";
+      document.getElementById("cjkbutton").textContent = "Hanzi Mode";
     }
 }
 
@@ -209,11 +237,11 @@ function toggleSpringVisibility(){
         document.getElementById("springbutton");
         springbutton.style.backgroundColor = "#006affff";
         springbutton.style.color = "#fff";
-        springbutton.textContent = "hide connections";
+        springbutton.textContent = "Hide Connections";
     }
     else{
         document.getElementById("springbutton");
-        springbutton.textContent = "see connections";
+        springbutton.textContent = "See Connections";
         springbutton.style.color = "#000";
         springbutton.style.backgroundColor = "#7bff00ff";
     }

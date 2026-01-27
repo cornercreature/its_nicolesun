@@ -30,34 +30,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="poster">
-        <div id="softCanvas"></div>
-    </div>
     <div class="control">
         <div class="intro">
-            <h2>String maker</h2>
-            <hr>
-            <p>1. Type. <br> 2. Drag a word's start to place.<br> 3. Backspace to delete.</p>
+            <h2>GRAVITY<br>TYPE<br>MAKER</h2>
         </div>
-        <button id = "springbutton">Hide Connections</button>
-        <button id = "cjkbutton">Hanzi Mode</button>
-        <div class="font-slider-container">
-            <!-- you can put the label before the id'd class and call it and itll work! -->
-            <label for = "fontSlider">Font Size: <span id="fontValue"> 280</span></label>
-            <input type="range" id="fontSlider" min="1" max="560" value="280" oninput="updateFontSize()">
+        <div class="instructions">
+            <p>✰ Type. <br> ✰ Drag starting character to place.<br> ✰ Backspace to delete.</p>
         </div>
-        <div class="gVectorX-slider-container">
-            <label for = "gVectorXSlider">Gravity X: <span id="gVectorXValue"> 0.05</span></label>
-            <input type="range" id="gVectorXSlider" min="-1.0" max="1.0" step="0.01" value="0.05" oninput="updateGVectorX()">
+        
+        <div class="buttons">
+            <h3>CONTROLS</h3>
+            <button id = "springbutton">Hide Connections</button>
+            <button id = "cjkbutton">Hanzi Mode</button>
         </div>
-        <div class="gVectorY-slider-container">
-            <label for = "gVectorYSlider">Gravity Y: <span id="gVectorYValue"> 0.05</span></label>
-            <input type="range" id="gVectorYSlider" min="-1.0" max="1.0" step="0.01" value="0.05" oninput="updateGVectorY()">
+        <div class="sliders">
+            <p>✰ Adjust BEFORE typing text.</p>
+            <div class="font-slider-container">
+                <!-- you can put the label before the id'd class and call it and itll work! -->
+                <label for = "fontSlider">Font Size: <span id="fontValue"> 280</span></label>
+                <input type="range" id="fontSlider" min="1" max="560" value="280" oninput="updateFontSize()">
+            </div>
+            <p>✰ Slide to customize gravitational force and direction.</p>
+            <div class="gVectorX-slider-container">
+                <label for = "gVectorXSlider">Gravity X: <span id="gVectorXValue"> 0.05</span></label>
+                <input type="range" id="gVectorXSlider" min="-1.0" max="1.0" step="0.01" value="0.05" oninput="updateGVectorX()">
+            </div>
+            <div class="gVectorY-slider-container">
+                <label for = "gVectorYSlider">Gravity Y: <span id="gVectorYValue"> 0.05</span></label>
+                <input type="range" id="gVectorYSlider" min="-1.0" max="1.0" step="0.01" value="0.05" oninput="updateGVectorY()">
+            </div>
         </div>
+        <div class="gravitygif">
+<a title="Rachelz9999, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:GravPoss.gif"><img width="256" alt="GravPoss" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/GravPoss.gif?20170101094953"></a>        </div>
+    </div>
+    <div class="poster">
+        <div id="softCanvas"></div>
     </div>
 </body>
 </html>

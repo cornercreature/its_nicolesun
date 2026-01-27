@@ -36,7 +36,7 @@ class CParticle extends VerletParticle2D{
   show(){
     stroke("#e1ff00ff");
     textSize(this.fontSize);
-    textFont('Zen Antique Soft');
+    textFont('Cactus Classical Serif');
     textAlign(CENTER, CENTER);
     text(this.displayText,this.x,this.y);
   }
