@@ -39,17 +39,17 @@
 </head>
 <body>
     <div class="controlR">
-        <div class="intro">
+        <div class="container">
             <h2>GRAVITY<br>TYPE<br>MAKER</h2>
         </div>
         <div class="instructions">
             <p>✰ Type. <br> ✰ Drag starting character to place.<br> ✰ Backspace to delete.</p>
         </div>
         
-        <div class="buttons">
+        <div class="container">
             <button id = "cjkbutton">Hanzi Mode</button>
         </div>
-        <div class="sliders">
+        <div class="container">
             <h3>GRAVITY</h3>
             <p>✰ Slide to customize gravitational force and direction.</p>
             <div class="gVectorX-slider-container">
@@ -69,12 +69,12 @@
         <div id="softCanvas"></div>
     </div>
     <div class="controlL">
-        <div class="appearancecontainer">
+        <div class="container">
             <h3>Text Appearance</h3>
         <div class="buttons">
             <button id = "springbutton">Hide Connections</button>
         </div>
-        <div class="sliders">
+        <div class="container">
             <p>✰ Adjust BEFORE typing text.</p>
             <div class="font-slider-container">
                 <!-- you can put the label before the id'd class and call it and itll work! -->
@@ -83,7 +83,7 @@
             </div>
             <div class="font-stroke-container">
                 <label for = "fontStrokeW">Outline Weight: <span id="strokeValue"> 5</span></label>
-                <input type="range" id="fontStrokeW" min="0" max="20" value="5" oninput="updateStrokeW()">
+                <input type="range" id="fontStrokeW" min="0" max="50" value="5" oninput="updateStrokeW()">
             </div>
         </div>
         <h3>BACKGROUND COLOR</h3>
