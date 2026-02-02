@@ -1,0 +1,33 @@
+body {
+  overflow: hidden;
+}
+
+#cordview{
+    position:fixed;
+    top: 5px;
+    left: 5px;
+    color:white;
+    z-index:1000;
+}
+
+#viewport-container {
+  width: 100vw;
+  height:100vh;
+  overflow: hidden;
+}
+
+#world{
+    width: 600%;
+    height: 600%;
+    position:absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+}
+
+/* hides scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0; /* Ensures no empty space is left behind */
+  height: 0;
+}
