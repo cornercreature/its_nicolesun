@@ -2,10 +2,40 @@ body {
   overflow: hidden;
 }
 
+#title{
+    position:fixed;
+    margin:0;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color:white;
+    z-index: 1000;
+}
+
+h1{
+    margin:0;
+    top:1rem;
+    left:2rem;
+    font-size: 6rem;font-weight: 100;
+    font-style: normal;
+}
+
+h3{
+    position:fixed;
+    margin:0;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    bottom:1rem;
+    right:2rem;
+    font-size: 2rem;
+    font-weight: 100;
+    font-style: italic;
+}
 #cordview{
     position:fixed;
     top: 5px;
-    left: 5px;
+    right: 5px;
     color:white;
     z-index:1000;
 }

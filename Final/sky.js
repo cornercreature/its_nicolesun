@@ -34,7 +34,7 @@ function animateBackground() {
   //makes sky gradient
   world.style.background = `radial-gradient(
     circle,
-    hsla(200, 81%, 60%, 1.00),
+    hsla(200, 100%, 72%, 1.00),
     hsla(210, 67%, 40%, 1.00)
   )`;
   requestAnimationFrame(animateBackground);
