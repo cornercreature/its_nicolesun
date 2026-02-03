@@ -7,7 +7,7 @@ const skyImages = [
 ];
 
 //starting image width
-let imgWidth = 20;
+let imgWidth = 6;
 
 window.addEventListener('click', (e)=>{
     //screen coordinates to world coordinates
@@ -24,12 +24,20 @@ window.addEventListener('click', (e)=>{
     img.style.top = worldY + 'px';
     //centering image
     img.style.transform = 'translate(-50%, -50%)';
-    img.style.width = imgWidth + 'px';
+    img.style.width = imgWidth + 'rem';
+    img.style.opacity = '1';
+    img.style.transition = 'opacity 10s cubic-bezier(0.25, 0, 0.1, 1)';
 
+    //makes image appear in world
     world.appendChild(img);
 
+    // start fading after 50ms
+    setTimeout(() => {
+        img.style.opacity = '0';
+    }, 50);
+
     //make each new image shrink
-    currentWidth *= 0.92;
+    imgWidth *= 0.92;
 
 });
 

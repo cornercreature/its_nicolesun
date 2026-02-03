@@ -2,9 +2,11 @@ body {
   overflow: hidden;
 }
 
-#title{
+#titlebox{
     position:fixed;
     margin:0;
+    top:4rem;
+    left:6rem;
     font-family: 'DINish', sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -14,22 +16,44 @@ body {
 
 h1{
     margin:0;
-    top:4rem;
-    left:6rem;
-    font-size: 1rem;
+    font-size: 3rem;
     font-weight: 300;
-    font-style: normal;
+}
+
+.charspan{
+    filter:blur(4px);
+}
+
+.charspan:hover{
+    filter:blur(0px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+}
+
+#infobox{
+    position:fixed;
+    margin:0;
+    bottom:4rem;
+    right:6rem;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color:white;
+    z-index: 1000;
 }
 
 h3{
-    position:fixed;
     margin:0;
-    font-family: "DINish Expanded", sans-serif;
+    font-size: 1rem;
     font-weight: 300;
-    font-style: normal;
-    bottom:1rem;
-    right:2rem;
-    font-size: 2rem;
+}
+
+h3{
+    filter:blur(2px);
+}
+
+h3:hover{
+    filter:blur(0px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
 }
 
 #cordview{
