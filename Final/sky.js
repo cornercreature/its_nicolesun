@@ -3,6 +3,9 @@ let offsetX = -4075, offsetY = -2200;
 world.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
 
 let startX, startY;
+let lastCharUpdate = 0;
+
+const scrollInfo = document.getElementById('scrollinfo');
 
 //making viewport pan across world
 // for event wheel, pass the event as detailed in (e)...
@@ -10,6 +13,7 @@ window.addEventListener('wheel', (e) =>{
     //prevents default scrolling function and allows panning to work
     e.preventDefault();
     //subtracts x scroll amount from current offset, moving window 
+    //-= is shorthand for x=x-y
     offsetX -= e.deltaX;
     offsetY -= e.deltaY;
 
@@ -22,6 +26,17 @@ window.addEventListener('wheel', (e) =>{
     world.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
 
     document.getElementById('cordview').textContent = `${offsetX},${offsetY}`;
+
+    const now = Date.now();
+    if (now - lastCharUpdate > 300) {
+        lastCharUpdate = now;
+        const charspans = document.querySelectorAll('.charspan');
+
+        charspans.forEach((span, i ) =>{
+            const movement = Math.abs(offsetY + offsetX) / 700; //make value based off of offset
+            span.style.transform = `translateY(${Math.random()*50*(movement)}px)`
+        });
+    }
 
 }, //use commas to pass multiple arguements also at this scale!
 {
@@ -39,4 +54,5 @@ function animateBackground() {
   )`;
   requestAnimationFrame(animateBackground);
 }
+
 animateBackground();

@@ -4,33 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airheaded</title>
+    <link rel="icon" type="image/x-icon" href="/Final/fav.png">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="airstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Egyptian+Hieroglyphs&family=Yarndings+12&family=Yarndings+20&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- used just to see x-y as i dev -->
     <div id="cordview">0, 0</div>
     <div id="titlebox">
-        <h1>
-            <span class="charspan">A</span>
-            <span class="charspan">I</span>
-            <span class="charspan">R</span>
-            <span class="charspan">H</span>
-            <span class="charspan">E</span>
-            <span class="charspan">A</span>
-            <span class="charspan">D</span>
-            <span class="charspan">E</span>
-            <span class="charspan">D</span>
-        </h1>
+        <h3>Airheaded.</h3>
     </div>
     
     <div id="infobox">
-        <h3>Scroll to fly.</h3>
+        <h3 id="clickinfo">Click to search.</h3>
+        <h3 id="scrollinfo">Scroll to fly.</h3>
+    </div>
+    
+    <div class="escapebox">
+        <p>
+            <span class="escape"></span>
+            <span class="escape"></span>
+            <span class="escape"></span>
+        </p>
+
     </div>
 
     <div id="viewport">
 
         <div id="world">
+            <div id="scramble">
+                <h1>
+                <!-- transform with inline styling to maintain top of hierarchy -->
+                <span class="charspan" style="transform: translateY(30px);">A</span>
+                <span class="charspan" style="transform: translateY(-25px);">I</span>
+                <span class="charspan" style="transform: translateY(10px);">R</span>
+                <span class="charspan" style="transform: translateY(90px);">H</span>
+                <span class="charspan" style="transform: translateY(-20px);">E</span>
+                <span class="charspan" style="transform: translateY(50px);">A</span>
+                <span class="charspan" style="transform: translateY(-80px);">D</span>
+                <span class="charspan" style="transform: translateY(-30px);">E</span>
+                <span class="charspan" style="transform: translateY(130px);">D</span>
+                </h1>
+            </div>
 
         </div>
     </div>

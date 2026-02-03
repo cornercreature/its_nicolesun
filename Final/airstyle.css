@@ -9,7 +9,7 @@ body {
     left:6rem;
     font-family: 'DINish', sans-serif;
     font-weight: 300;
-    font-style: normal;
+    font-style: italic;
     color:white;
     z-index: 1000;
 }
@@ -18,15 +18,21 @@ h1{
     margin:0;
     font-size: 3rem;
     font-weight: 300;
+    cursor: default;
 }
 
 .charspan{
+    /* transform works with inline-block but not inline (which is) */
+    display: inline-block;
     filter:blur(4px);
+    cursor: default;
+    transition: transform 0.9s ease;
 }
 
 .charspan:hover{
     filter:blur(0px);
     transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
 }
 
 #infobox{
@@ -45,15 +51,24 @@ h3{
     margin:0;
     font-size: 1rem;
     font-weight: 300;
+    cursor: default;
+}
+
+#clickinfo{
+    position: fixed;
+    margin:0;
+    bottom:9rem;
+    right:14rem;
 }
 
 h3{
-    filter:blur(2px);
+    filter:blur(6px);
 }
 
 h3:hover{
     filter:blur(0px);
     transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
 }
 
 #cordview{
@@ -83,16 +98,6 @@ h3:hover{
     pointer-events: none;  /* so it doesn't block scrolling/clicks */
     animation: pulse 40s ease-in-out infinite;
 }
- 
-/* so that vignette slightly pulses */
-@keyframes pulse {
-    0%, 100% {
-        box-shadow: inset 0px 0px 0rem rgba(255, 255, 255, 0.4);
-    }
-    50% {
-        box-shadow: inset 0px 0px 6rem rgba(255, 255, 255, 0.4);
-    }
-}
 
 #world{
     width: 600%;
@@ -103,9 +108,30 @@ h3:hover{
     overflow: hidden;
 }
 
+#scramble{
+    position: relative;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3rem;
+    color:white;
+    top:1200px;
+    left:4050px;
+}
 /* hides scrollbar */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
   width: 0; /* Ensures no empty space is left behind */
   height: 0;
+}
+
+ /* keyframe section! */
+/* so that vignette slightly pulses */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: inset 0px 0px 0rem rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        box-shadow: inset 0px 0px 6rem rgba(255, 255, 255, 0.4);
+    }
 }
