@@ -46,6 +46,30 @@ h3{
   overflow: hidden;
 }
 
+/* after means it sits ontop of the viewport container */
+#viewport::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0px 0px 8rem rgba(255, 255, 255, 0.4);
+    z-index: 10;
+    pointer-events: none;  /* so it doesn't block scrolling/clicks */
+    animation: pulse 40s ease-in-out infinite;
+}
+ 
+/* so that vignette slightly pulses */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: inset 0px 0px 0rem rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        box-shadow: inset 0px 0px 6rem rgba(255, 255, 255, 0.4);
+    }
+}
+
 #world{
     width: 600%;
     height: 600%;
