@@ -1,51 +1,169 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @font-face {
-    font-family: 'D-DIN';
-    src: url('DIN/D-DIN.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'DINish';
+    src: url('DINish/DINish-Light.woff2') format('woff2');
+    font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'D-DIN';
-    src: url('DIN/D-DIN-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'D-DIN';
-    src: url('DIN/D-DIN-Italic.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'DINish';
+    src: url('DINish/DINish-LightItalic.woff2') format('woff2');
+    font-weight: 300;
     font-style: italic;
 }
 @font-face {
-    font-family: 'D-DIN Condensed';
-    src: url('DIN/D-DINCondensed.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'DINish';
+    src: url('DINish/DINish-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: 'D-DIN Condensed';
-    src: url('DIN/D-DINCondensed-Bold.woff2') format('woff2');
-    font-weight: bold;
+    font-family: 'DINish';
+    src: url('DINish/DINish-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish';
+    src: url('DINish/DINish-Medium.woff2') format('woff2');
+    font-weight: 500;
     font-style: normal;
 }
 @font-face {
-    font-family: 'D-DIN Exp';
-    src: url('DIN/D-DINExp.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'DINish';
+    src: url('DINish/DINish-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish';
+    src: url('DINish/DINish-SemiBold.woff2') format('woff2');
+    font-weight: 600;
     font-style: normal;
 }
 @font-face {
-    font-family: 'D-DIN Exp';
-    src: url('DIN/D-DINExp-Bold.woff2') format('woff2');
-    font-weight: bold;
+    font-family: 'DINish';
+    src: url('DINish/DINish-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish';
+    src: url('DINish/DINish-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 @font-face {
-    font-family: 'D-DIN Exp';
-    src: url('DIN/D-DINExp-Italic.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'DINish';
+    src: url('DINish/DINish-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish';
+    src: url('DINish/DINish-Heavy.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINish';
+    src: url('DINish/DINish-HeavyItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish';
+    src: url('DINish/DINish-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINish';
+    src: url('DINish/DINish-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-Heavy.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-HeavyItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DINish Expanded';
+    src: url('DINishExpanded/DINishExpanded-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
     font-style: italic;
 }
