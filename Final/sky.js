@@ -25,7 +25,7 @@ window.addEventListener('wheel', (e) =>{
     offsetY = Math.max(-(world.offsetHeight - vh), Math.min(0,offsetY));
     world.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
 
-    document.getElementById('cordview').textContent = `${offsetX},${offsetY}`;
+    // document.getElementById('cordview').textContent = `${offsetX},${offsetY}`;
 
     const now = Date.now();
     if (now - lastCharUpdate > 300) {
