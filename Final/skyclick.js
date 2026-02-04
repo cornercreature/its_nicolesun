@@ -38,7 +38,7 @@ window.addEventListener('click', (e)=>{
     }, 50);
 
     //make each new image shrink
-    imgWidth *= 0.92;
+    imgWidth *= 0.99;
 
     if (imgWidth < 0.2){
         const reit = document.getElementById('reiteration');

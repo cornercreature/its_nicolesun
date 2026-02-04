@@ -34,6 +34,15 @@ p{
     line-height: 1.5;
 }
 
+pre{
+    font-family: 'DINishExpanded', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    line-height: 1.5;
+}
+
 hr{
     width:10rem;
     border: 0.5px solid white;
@@ -214,6 +223,91 @@ h3:hover{
     height:6rem;
 }
 
+#skyfigattach{
+    visibility: hidden;
+    border: 1px solid white;
+    position: relative;
+    top:3480px;
+    left:4500px;
+    z-index: 1200;
+}
+
+#skyfigattach1{
+    visibility: hidden;
+    border: 1px solid white;
+    position: relative;
+    top:3480px;
+    left:4500px;
+    z-index: 1200;
+}
+
+#skyfig2{
+    position: relative;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 3rem;
+    color:white;
+    top:3500px;
+    left:6200px;
+    z-index: 1200;
+    display: flex;
+    text-align: center;
+    padding:8rem 2rem 2rem 2rem;
+    border: 1px solid white;
+    flex-direction: column;
+    vertical-align: bottom;
+    width:18rem;
+    height:6rem;
+}
+
+#skyfig2attach{
+    visibility: hidden;
+    border: 1px solid white;
+    position: relative;
+    top:3500px;
+    left:6200px;
+    z-index: 1200;
+}
+
+#skyfig2attach1{
+    visibility: hidden;
+    border: 1px solid white;
+    position: relative;
+    top:3500px;
+    left:6200px;
+    z-index: 1200;
+}
+
+#particle{
+    position: relative;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 3rem;
+    color:white;
+    top:0px;
+    left:5300px;
+    z-index: 1200;
+    display: flex;
+    text-align: center;
+    padding:2rem 2rem 4rem 2rem;
+    border: 1px solid white;
+    flex-direction: column;
+    vertical-align: bottom;
+    width:18rem;
+    height:18rem;
+    cursor:default;
+}
+
+#reiteration{
+    visibility: hidden;
+    border: 1px solid white;
+    position: relative;
+    top:3500px;
+    left:6200px;
+    z-index: 1200;
+}
 
 /* hides scrollbar */
 .hide-scrollbar::-webkit-scrollbar {
