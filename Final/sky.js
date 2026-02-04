@@ -38,10 +38,10 @@ window.addEventListener('wheel', (e) =>{
             span.style.transform = `translateY(${Math.random()*50*(movement)}px)`
         });
 
-        // dodgespans.forEach((span, i ) =>{
-        //     const movement = Math.abs(offsetY + offsetX) / 700; //make value based off of offset
-        //     span.style.transform = `translateX(${Math.random()*i*0.8*(movement)}px)`
-        // });
+        dodgespans.forEach((span, i ) =>{
+            const movement = Math.abs(offsetY + offsetX) / 700; //make value based off of offset
+            span.style.transform = `translateX(${Math.random()*i*0.8*(movement)}px)`
+        });
     }
 }, //use commas to pass multiple arguements also at this scale!
 {

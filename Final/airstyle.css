@@ -51,7 +51,7 @@ hr{
 
 h1{
     margin:0;
-    font-size: 1rem;
+    font-size: 4rem;
     font-weight: 300;
     cursor: default;
 }
@@ -156,15 +156,26 @@ h3:hover{
     overflow: hidden;
 }
 
-#scramble{
+#scramble1{
     position: relative;
     font-family: 'DINish', sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 6rem;
     color:white;
-    top:2180px;
-    left:4582px;
+    top:2080px;
+    left:4250px;
+}
+
+#scramble2{
+    position: relative;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 6rem;
+    color:white;
+    top:2620px;
+    left:5020px;
 }
 
 #notsure{
@@ -174,8 +185,8 @@ h3:hover{
     font-style: normal;
     font-size: 3rem;
     color:white;
-    top:2000px;
-    left:4000px;
+    top:1600px;
+    left:3400px;
     z-index: 1000;
 }
 
@@ -186,8 +197,8 @@ h3:hover{
     font-style: normal;
     font-size: 3rem;
     color:white;
-    top:2145px;
-    left:6050px;
+    top:2845px;
+    left:6650px;
     z-index: 1000;
 }
 
@@ -221,33 +232,84 @@ h3:hover{
     vertical-align: bottom;
     width:15rem;
     height:6rem;
+    cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
+}
+
+#skyfig1:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
 }
 
 #skyfigattach{
     visibility: hidden;
     border: 1px solid white;
     position: relative;
-    top:3480px;
-    left:4500px;
+    top:3600px;
+    left:4800px;
     z-index: 1200;
-}
-
-#skyfigattach1{
-    visibility: hidden;
-    border: 1px solid white;
-    position: relative;
-    top:3480px;
-    left:4500px;
-    z-index: 1200;
-}
-
-#skyfig2{
-    position: relative;
+    cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
     font-family: 'DINish', sans-serif;
     font-weight: 300;
     font-style: italic;
     font-size: 3rem;
     color:white;
+    width: 20rem;
+    height:17rem;
+    padding:1.4rem 2rem 1rem 3rem;
+    text-align: left;
+}
+
+#skyfigattach:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
+}
+
+#skyfigattach1{
+    visibility: hidden;
+    position: relative;
+    top:3700px;
+    left:4450px;
+    z-index: 1200;
+    cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
+    width: 23rem;
+    text-align: center;
+}
+
+#skyfigattach1:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
+}
+
+#skyfigattach2{
+    visibility: hidden;
+    position: relative;
+    top:3780px;
+    left:4850px;
+    z-index: 1200;
+    cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
+    width: 23rem;
+    text-align: center;
+}
+
+#skyfigattach2:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
+}
+
+#skyfig2{
+    position: relative;
     top:3500px;
     left:6200px;
     z-index: 1200;
@@ -259,33 +321,87 @@ h3:hover{
     vertical-align: bottom;
     width:18rem;
     height:6rem;
+    cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 3rem;
+    color:white;
+}
+
+#skyfig2:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
+    font-style: italic;
 }
 
 #skyfig2attach{
     visibility: hidden;
     border: 1px solid white;
     position: relative;
-    top:3500px;
-    left:6200px;
+    top:3600px;
+    left:6700px;
     z-index: 1200;
+    cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
+    width: 20rem;
+    height:17rem;
+    padding:1.4rem 2rem 1rem 3rem;
+    text-align: left;
+}
+
+#skyfig2attach:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
 }
 
 #skyfig2attach1{
     visibility: hidden;
-    border: 1px solid white;
     position: relative;
-    top:3500px;
-    left:6200px;
+    top:3800px;
+    left:6400px;
     z-index: 1200;
+    cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
+    width: 23rem;
+    padding:0rem 1rem;
+    text-align: center;
+}
+
+#skyfig2attach1:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
+}
+
+#skyfig2attach2{
+    visibility: hidden;
+    position: relative;
+    top:3940px;
+    left:6800px;
+    z-index: 1200;
+    cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
+    width: 24rem;
+    padding:0rem 1rem;
+    text-align: center;
+}
+
+#skyfig2attach2:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
 }
 
 #particle{
     position: relative;
-    font-family: 'DINish', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 3rem;
-    color:white;
     top:0px;
     left:5300px;
     z-index: 1200;
@@ -298,15 +414,34 @@ h3:hover{
     width:18rem;
     height:18rem;
     cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
+}
+
+#particle:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
 }
 
 #reiteration{
     visibility: hidden;
-    border: 1px solid white;
     position: relative;
-    top:3500px;
-    left:6200px;
-    z-index: 1200;
+    top:100px;
+    left:5540px;
+    z-index: 1240;
+    cursor:default;
+    filter:blur(0px);
+    transition: transform 0.9s ease;
+    width: 24rem;
+    padding:0rem 1rem;
+    text-align: center;
+}
+
+#reiteration:hover{
+    filter:blur(6px);
+    transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
+    cursor: default;
 }
 
 /* hides scrollbar */

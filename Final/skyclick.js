@@ -27,7 +27,10 @@ window.addEventListener('click', (e)=>{
     img.style.width = imgWidth + 'rem';
     img.style.opacity = '1';
     img.style.filter = 'blur(0px)';
-    img.style.transition = 'filter 80s cubic-bezier(0.25, 0, 0.1, 1)';
+    img.style.transition = 'filter 60s cubic-bezier(0.25, 0, 0.1, 1)';
+    img.style.pointerEvents = 'none';
+    //prevent event from clicking on interactive elements
+    e.stopPropagation();
 
     //makes image appear in world
     world.appendChild(img);
@@ -38,7 +41,7 @@ window.addEventListener('click', (e)=>{
     }, 50);
 
     //make each new image shrink
-    imgWidth *= 0.99;
+    imgWidth *= 0.96;
 
     if (imgWidth < 0.2){
         const reit = document.getElementById('reiteration');
