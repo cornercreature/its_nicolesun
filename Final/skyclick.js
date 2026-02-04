@@ -1,6 +1,6 @@
 //set images as array so that they can be randomly picked
 const skyImages = [
-    'skies/1.JPG','skies/2.jpg','skies/3.jpg','skies/4.png','skies/5.png',
+    'skies/1.JPG','skies/2.jpg','skies/4.png','skies/5.png',
     'skies/6.png','skies/7.png','skies/8.png','skies/9.png','skies/10.png',
     'skies/11.png','skies/12.png','skies/13.png','skies/14.png','skies/15.png',
     'skies/16.png','skies/17.jpg','skies/18.png', 'skies/19.png'
