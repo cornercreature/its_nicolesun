@@ -14,9 +14,35 @@ body {
     z-index: 1000;
 }
 
+.escapebox{
+    position:fixed;
+    margin:0;
+    top:10rem;
+    left:10rem;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    z-index: 1000;
+}
+
+p{
+    font-family: 'DINish', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    line-height: 1.5;
+}
+
+hr{
+    width:10rem;
+    border: 0.5px solid white;
+    margin-bottom: 2rem;
+}
+
 h1{
     margin:0;
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: 300;
     cursor: default;
 }
@@ -24,13 +50,13 @@ h1{
 .charspan{
     /* transform works with inline-block but not inline (which is) */
     display: inline-block;
-    filter:blur(4px);
+    filter:blur(0px);
     cursor: default;
     transition: transform 0.9s ease;
 }
 
 .charspan:hover{
-    filter:blur(0px);
+    filter:blur(6px);
     transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
     cursor: default;
 }
@@ -61,12 +87,25 @@ h3{
     right:14rem;
 }
 
+.dodgespan{
+    display: inline-block;
+    transition: 0.8s all cubic-bezier(0.8, 0, 0.1, 1);
+    white-space: pre;
+    z-index:1000;
+}
+
+.dodgespan:hover{
+    transform: translateX(3rem);
+    transition: 0.8s all cubic-bezier(0.8, 0, 0.1, 1);
+    cursor: default;
+}
+
 h3{
-    filter:blur(6px);
+    filter:blur(0px);
 }
 
 h3:hover{
-    filter:blur(0px);
+    filter:blur(6px);
     transition: 0.8s all cubic-bezier(0.25, 0, 0.1, 1);
     cursor: default;
 }
@@ -115,9 +154,67 @@ h3:hover{
     font-style: normal;
     font-size: 3rem;
     color:white;
-    top:1200px;
-    left:4050px;
+    top:2180px;
+    left:4582px;
 }
+
+#notsure{
+    position: relative;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3rem;
+    color:white;
+    top:2000px;
+    left:4000px;
+    z-index: 1000;
+}
+
+#better{
+    position: relative;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3rem;
+    color:white;
+    top:2145px;
+    left:6050px;
+    z-index: 1000;
+}
+
+#else{
+    position: relative;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3rem;
+    color:white;
+    top:3091px;
+    left:3386px;
+    z-index: 1200;
+}
+
+#skyfig1{
+    position: relative;
+    font-family: 'DINish', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 3rem;
+    color:white;
+    top:3480px;
+    left:4500px;
+    z-index: 1200;
+    display: flex;
+    text-align: center;
+    padding:8rem 2rem 2rem 2rem;
+    border: 1px solid white;
+    flex-direction: column;
+    vertical-align: bottom;
+    width:15rem;
+    height:6rem;
+}
+
+
 /* hides scrollbar */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
@@ -132,6 +229,6 @@ h3:hover{
         box-shadow: inset 0px 0px 0rem rgba(255, 255, 255, 0.4);
     }
     50% {
-        box-shadow: inset 0px 0px 6rem rgba(255, 255, 255, 0.4);
+        box-shadow: inset 0px 0px 3rem rgba(255, 255, 255, 0.4);
     }
 }

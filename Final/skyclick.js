@@ -7,7 +7,7 @@ const skyImages = [
 ];
 
 //starting image width
-let imgWidth = 6;
+let imgWidth = 8;
 
 window.addEventListener('click', (e)=>{
     //screen coordinates to world coordinates
@@ -26,17 +26,31 @@ window.addEventListener('click', (e)=>{
     img.style.transform = 'translate(-50%, -50%)';
     img.style.width = imgWidth + 'rem';
     img.style.opacity = '1';
-    img.style.transition = 'opacity 10s cubic-bezier(0.25, 0, 0.1, 1)';
+    img.style.filter = 'blur(0px)';
+    img.style.transition = 'filter 80s cubic-bezier(0.25, 0, 0.1, 1)';
 
     //makes image appear in world
     world.appendChild(img);
 
-    // start fading after 50ms
+    // start blurring after 50ms
     setTimeout(() => {
-        img.style.opacity = '0';
+        img.style.filter = 'blur(40px)';
     }, 50);
 
     //make each new image shrink
     imgWidth *= 0.92;
+
+    if (imgWidth < 0.2){
+        const reit = document.getElementById('reiteration');
+        //clone reiteration so that original is not disturbed
+        const clone = reit.cloneNode(true);
+        clone.removeAttribute('id');
+        clone.style.position = 'absolute';
+        //click so that it appears wherever
+        clone.style.left = worldX + 'px';
+        clone.style.top = worldY + 'px';
+        clone.style.transform = 'translate(-50%, -50%)';
+        world.appendChild(clone);
+    }
 
 });
