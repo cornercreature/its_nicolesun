@@ -41,9 +41,9 @@ window.addEventListener('click', (e)=>{
     }, 50);
 
     //make each new image shrink
-    imgWidth *= 0.96;
+    imgWidth *= 0.90;
 
-    if (imgWidth < 0.2){
+    if (imgWidth < 0.5){
         const reit = document.getElementById('reiteration');
         //clone reiteration so that original is not disturbed
         const clone = reit.cloneNode(true);
